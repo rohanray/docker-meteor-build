@@ -22,9 +22,8 @@ EXPOSE 3000 3001
 # ENTRYPOINT [ "sh", "-c", "env && cd /app && meteor --verbose" ]
 ENTRYPOINT [ "sh", "-c", "env && apt-get install -y g++ build-essential python && cd /app && meteor build --directory /mbuild --verbose && ls -la /mbuild/bundle" ]
 
-# _post_clean.sh
-#RUN apt-get purge -y build-essential g++ python && apt-get remove --purge -y build-essential g++ python
-#RUN apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y
-#RUN rm -rf /var/lib/apt/lists/* && cp -R /usr/share/locale/en\@* /tmp/ && rm -rf /usr/share/locale/* && mv /tmp/en\@* /usr/share/locale/
-#RUN rm -rf /usr/share/doc /usr/share/doc-base /usr/share/man /usr/share/locale /usr/share/zoneinfo /var/cache/debconf/*-old
-#RUN rm -rf /var/lib/cache /var/lib/log && rm -rf /tmp/*
+RUN apt-get purge -y build-essential g++ python && apt-get remove --purge -y build-essential g++ python
+RUN apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y
+RUN rm -rf /var/lib/apt/lists/* && cp -R /usr/share/locale/en\@* /tmp/ && rm -rf /usr/share/locale/* && mv /tmp/en\@* /usr/share/locale/
+RUN rm -rf /usr/share/doc /usr/share/doc-base /usr/share/man /usr/share/locale /usr/share/zoneinfo /var/cache/debconf/*-old
+RUN rm -rf /var/lib/cache /var/lib/log && rm -rf /tmp/*
