@@ -4,7 +4,7 @@ echo "[+5+] START: Executing meteor build command"
 apt-get -qq update 
 apt-get -qq install -y python make g++
 cd /opt/src
-meteor npm install
+meteor npm install --production
 meteor build /opt/dist --architecture os.linux.x86_64 --verbose
 cd /opt/dist
 ls -la
