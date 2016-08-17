@@ -1,6 +1,10 @@
 #!/bin/sh
+. /utils-scripts/file-parser.sh
+env
 
-echo "[+5+] START: Executing meteor build command"
+. /meteor-docker-scripts/install_meteor.sh
+
+echo "[+5+] START: Executing meteor build command $METEOR_VERSION"
 apt-get -qq update 
 apt-get -qq install -y python make g++
 cd /opt/src
