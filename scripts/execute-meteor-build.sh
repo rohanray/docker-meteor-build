@@ -1,5 +1,5 @@
 #!/bin/sh
-. /utils-scripts/file-parser.sh
+. /meteor-docker-scripts/file-parser.sh
 
 echo "[+3+] START: Installing Meteor $METEOR_VERSION"
 
