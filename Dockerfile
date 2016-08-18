@@ -1,9 +1,7 @@
-FROM          debian:jessie
+FROM          roray/jessie-init-for-meteor 
 MAINTAINER    Rohan Ray (https://github.com/rohanray)
 
 COPY scripts /meteor-docker-scripts
-COPY utils /utils-scripts
-RUN sh /meteor-docker-scripts/main-script.sh
 
 ENTRYPOINT ["echo", "Node app built and ready at /opt/dist"]
 
