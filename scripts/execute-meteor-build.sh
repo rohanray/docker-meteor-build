@@ -1,4 +1,12 @@
 #!/bin/sh
+
+return_code () {
+  if [ ! "$1" -eq 0 ]; then
+    echo "[!] Process bombed. Terminating..."
+    exit 1
+  fi
+}
+
 . /meteor-docker-scripts/file-parser.sh
 
 echo "[+3+] START: Installing Meteor $METEOR_VERSION"
