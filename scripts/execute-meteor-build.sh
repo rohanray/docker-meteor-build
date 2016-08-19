@@ -21,7 +21,7 @@ apt-get -qq update
 apt-get -qq install -y python make g++
 cd /opt/src
 meteor npm install --production
-meteor build /opt/dist --architecture os.linux.x86_64 --verbose
+meteor build /opt/dist --architecture os.linux.x86_64
 cd /opt/dist
 ls -la
 echo "[+1+] FIN: Executing meteor build command"
