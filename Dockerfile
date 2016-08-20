@@ -1,5 +1,5 @@
 FROM          roray/jessie-init-for-meteor 
-MAINTAINER    Rohan Ray (https://github.com/rohanray)
+MAINTAINER    Rohan Ray (https://github.com/rohanray) [rohanray@outlook.com]
 
 COPY scripts /meteor-docker-scripts
 
